@@ -21,8 +21,11 @@ ws
 
 You must run the following ros2 nodes in different terminals:
 ros2 launch vesc_driver vesc_driver_node.launch.py
+
 ros2 run joy joy_node
+
 ros2 launch ydlidar_ros2_driver ydlidar_launch.py
+
 ros2 launch zed_wrapper zed_camera.launch.py camera_model:=zed2i
 
 P.S. If there are any errors in the terminals, 95% of the issues can be fixed by just unplugging that cord and plugging it back in :)

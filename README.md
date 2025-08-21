@@ -47,7 +47,7 @@ This perception algorithm allows the car to drive fully autonomously, avoiding b
 ## Demo Videos
 
 ### Demo 1
-[![Demo1](https://img.shields.io/badge/Video-Demo1-blue)](./videos/Demo1.mp4)
+[![Demo1](https://img.shields.io/badge/Video-Demo1-blue)](./Demo1.mp4)
 
 ### Demo 2
-[![Demo2](https://img.shields.io/badge/Video-Demo2-blue)](./videos/Demo2.mp4)
+[![Demo2](https://img.shields.io/badge/Video-Demo2-blue)](./Demo2.mp4)

@@ -28,7 +28,7 @@ class ReactiveController(Node):
         self.servo_span   = 0.5                     
         self.max_steer_rad = math.radians(50)
         self.rpm_per_mps   = 900.0
-        self.cruise_mps    = 2.2
+        self.cruise_mps    = 2.6
         self.slow_zone_m   = 1.2
         self.stop_zone_m   = 0.40
         self.front_half_deg = 15

@@ -1,6 +1,7 @@
 BACKGROUND
 
 Hello / Merhaba
+
 This repository combines the simulation environment and a perception-based algorithm for the F1TENTH stack. The algorithm uses a model trained in simulation alongside live ZED and LiDAR data, leveraging both a 2D LiDAR scan and the ZED camera for richer perception.
 When using only 2D LiDAR, we ran into limitations: the sensor can miss objects below the scan plane (e.g., chair legs) and, being laser-based, often fails to detect glass. With both LiDAR and camera enabled, the car can detect these cases.
 My primary goal in the NSF IRES program is to use the F1TENTH car because a smart car uses the same technologies—just at higher quality/scale. For example, a smart car typically uses a 3D LiDAR instead of the 2D unit on the F1 vehicle. Since both return scan data in a dataframe-like format, this approach should be nearly compatible with the smart car (not yet tested, but that’s my expectation).

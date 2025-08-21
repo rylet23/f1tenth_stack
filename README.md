@@ -44,3 +44,10 @@ The one issue I ran into was if the car slows down to being within ~.25 meters o
 FEATURES:
 This perception algorithm allows the car to drive fully autonomously, avoiding both moving and stationary objects, choose the best angle and best next "steps" determined by the current steering angle and speed of the vehicle, then drive in that direction. Currently the vehicle is set at a slower speed, but can be adjusted to +/- 5000 rpm.
 
+## Demo Videos
+
+### Demo 1
+<video src="./videos/Demo1.mp4" controls width="400"></video>
+
+### Demo 2
+<video src="./videos/Demo2.mp4" controls width="400"></video>

@@ -17,7 +17,9 @@ The maps folder includes several ITU campus variants and generic maps. To add yo
 RUNNING F1TENTH CAR FOR PERCEPTION
 
 You will need 6 terminals open, I'd recommend using "terminate", and for simplicity I'd run this in all terminals:
+
 cd ~/race_car_ws
+
 ws
 
 You must run the following ros2 nodes in different terminals:

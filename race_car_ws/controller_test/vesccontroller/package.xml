@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>vesc_controller_cpp</name>
+  <version>0.0.0</version>
+  <description>ROS 2 package for controlling VESC motor controller in C++</description>
+  <maintainer email="your_email@example.com">your_name</maintainer>
+  <license>Apache License 2.0</license>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>libboost-dev</depend> <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

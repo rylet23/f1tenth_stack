@@ -1,0 +1,51 @@
+# ROS2 build artifacts
+**/build/
+**/install/
+**/log/
+
+# Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ROS bag files
+*.bag
+*.bag.active
+*.db3
+rosbag2_*/
+
+# Model / weights / ML files
+*.pt
+*.onnx
+*.h5
+*.pkl
+
+# Archives and packages
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.deb
+
+# IDE / editor settings
+.vscode/
+.idea/
+
+# Env and secrets
+.env
+.secrets/
+
+# OS junk
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Other common simulation / data outputs
+*.csv
+*.pgm
+*.yaml
+*.json
+*.mp4
+

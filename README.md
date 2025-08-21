@@ -45,9 +45,11 @@ If it doesn't drive in a straight line for a second then slow down to a stop, it
 *After several test runs, it seems like the VESC needs a battery with atleast 10V by the way, so maybe try switching the battery with whichever one is connected to the computer itself.
 
 KNOWN ISSUES:
+
 The one issue I ran into was if the car slows down to being within ~.25 meters of an object it doesn't trigger its rewind logic. In order to get it to backup, I'd just put my hand/foot directly in front of the car and it'll trigger a rewind. I also havenn't tested if the vehicle will check behind itself first before a rewind.
 
 FEATURES:
+
 This perception algorithm allows the car to drive fully autonomously, avoiding both moving and stationary objects, choose the best angle and best next "steps" determined by the current steering angle and speed of the vehicle, then drive in that direction. Currently the vehicle is set at a slower speed, but can be adjusted to +/- 5000 rpm.
 
 ## Demo Videos

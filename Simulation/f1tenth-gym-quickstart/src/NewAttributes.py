@@ -18,7 +18,6 @@ class NewStuff:
         self.prev_speed = 0.0
         self.prev_steering = 0.0
 
-        # Load the trained ML model
         self.model = joblib.load('my_rf_model.pkl')
     
     def preprocess_lidar(self, ranges):

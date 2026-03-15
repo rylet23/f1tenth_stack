@@ -9,12 +9,11 @@ from starting_point import SimpleDriver
 from NewAttributes import NewStuff
 from waypoint_driver import PurePursuitDriver
 
-# === Load waypoints from CSV ===
 def load_waypoints(csv_file):
     waypoints = []
     with open(csv_file, 'r') as f:
         reader = csv.reader(f)
-        next(reader)  # Skip the header row ("x,y")
+        next(reader)
         for row in reader:
             if len(row) >= 2:
                 try:
@@ -24,15 +23,11 @@ def load_waypoints(csv_file):
                     continue
     return waypoints
 
-# === Choose driver here ===
 waypoints = load_waypoints('adjusted_smoothed_path.csv')
 drivers = [PurePursuitDriver(waypoints)]
-# If you want to use your LiDAR-based driver instead, switch to: drivers = [NewStuff()]
 
-# === Choose your racetrack ===
 RACETRACK = 'my_map2'
 
-# === Open CSV log ===
 log_file = open('drive_data.csv', mode='w', newline='')
 log_it = csv.writer(log_file)
 log_it.writerow(['step', 'speed', 'steering_angle', 'min_front_dist', 'collision_happen'])
@@ -45,7 +40,7 @@ if __name__ == '__main__':
 
     env = gym.make('f110_gym:f110-v0', map=f"maps/{RACETRACK}", map_ext=".pgm", num_agents=len(drivers))
 
-    poses = np.array([[0.0,0.0, starting_angle]])  # Adjust starting position if needed
+    poses = np.array([[0.0,0.0, starting_angle]])
     obs, step_reward, done, info = env.reset(poses=poses)
     env.render()
 
@@ -73,14 +68,14 @@ if __name__ == '__main__':
                     speed, steer, min_front_dist = result
                 else:
                     speed, steer = result
-                    min_front_dist = -1.0  # default placeholder
+                    min_front_dist = -1.0
 
                 collision_imminent = int(min_front_dist >= 0 and min_front_dist < 0.5)
                 log_it.writerow([step_counter, speed, steer, min_front_dist, collision_imminent])
                 actions.append([steer, speed])
             except Exception as e:
                 print(f"❌ Error during future.result(): {e}")
-                actions.append([0.0, 0.0])  # Stop the car if there's an error
+                actions.append([0.0, 0.0]) 
             step_counter += 1
 
         actions = np.array(actions)
